@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybierz język ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Czcionka -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Wspólny CSS -->
+     <link rel="stylesheet" href="css.css">
+   
+</head>
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+
+    <h1>Witaj na stronie!
+    </h1>
+    <h2>Wybierz język, w którym chcesz kontynuować</h2>
+
+    <div class="buttons">
+        <a href="pl.html" class="lang-btn">
+            <img src="pl.png" alt="Polish flag" class="flag-img"> Polski
+        </a>
+
+        <a href="en.html" class="lang-btn">
+            <img src="gb.png" alt="British flag" class="flag-img"> English
+        </a>
+
+        <a href="fr.html" class="lang-btn">
+            <img src="fr.png" alt="French flag" class="flag-img"> Français
+        </a>
+    </div>
+
+    <div class="footer">
+        Zrobione przez Rafała 💕
+    </div>
+</div>
+
+<script>
+    // Latające serduszka w tle
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7000);
+    }, 300);
+</script>
+
+</body>
+</html>

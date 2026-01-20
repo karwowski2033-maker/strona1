@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+
+    <h1>For You</h1>
+    <h2>A small place made just for you</h2>
+
+    <div class="card">
+        <h3>Hello, my love 🌸</h3>
+        <p>
+            I wanted to create something special — something that would stay,
+            just like my feelings for you.
+            This page is a quiet reminder that you are deeply loved.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Why you mean so much to me 💕</h3>
+        <ul class="reasons">
+            <li>Your smile makes everything feel lighter</li>
+            <li>You are beautiful in the most genuine way</li>
+            <li>Every conversation with you makes me smile and be thankful for you</li>
+            <li>I just love your <del>pimples</del> dimples</li>
+            <li>The moments we share — and the ones still waiting for us</li>
+            <li>Your piano skills are absolutely mesmerizing</li>
+            <li>You are my favorite person in this world 💖</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>A little promise 💌</h3>
+        <p>
+            I promise to be here — on easy days and difficult ones.
+            To support you, laugh with you,
+            and choose you every single day.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Play this 🎶</h3>
+        <p>
+            This song is here to keep you company for a moment.
+            Close your eyes and feel how much you are loved.
+        </p>
+
+        <audio controls style="margin-top: 20px; width: 100%;">
+            <source src="Armstrong.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="footer">
+        Made with love 💕
+    </div>
+</div>
+
+<script>
+    // Floating hearts background
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7000);
+    }, 200);
+
+    // Easter egg - click heart 17 times
+    let heartClicks = 0;
+    const heartElement = document.querySelector(".heart");
+    
+    heartElement.style.cursor = "pointer";
+    heartElement.addEventListener("click", function() {
+        heartClicks++;
+        
+        if (heartClicks === 17) {
+            // Show easter egg message
+            const message = document.createElement("div");
+            message.className = "easter-egg-message";
+            message.innerHTML = `
+                <p>I love you so much 💕</p>
+                <img src="ILY.png" alt="ILY" class="easter-egg-image">
+            `;
+            document.body.appendChild(message);
+            
+            // Remove message after 4 seconds
+            setTimeout(() => {
+                message.remove();
+                heartClicks = 0; // Reset counter
+            }, 6000);
+        }
+    });
+</script>
+
+</body>
+</html>
