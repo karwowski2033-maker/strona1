@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dla Ciebie ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+
+    <h1>Dla Ciebie</h1>
+    <h2>Oto Twój prezent na Walentynki</h2>
+
+    <div class="card">
+        <h3>
+           Chciałem wymyśleć jakiś wyjątkowy prezent. 
+           No i wymyśliłem - myślę, że spodoba Ci się to, 
+           co tutaj przyjapowałem.
+        </h3>
+    </div>
+<p></p>
+    <div class="card">
+        <p>
+            <strong>Fajna jesteś.</strong><br>
+            Śmiech bez powodu <del>Działdowo</del>, muzyka klasyczna,
+            te przesłodkie dołki w policzkach.
+            I to, jak bardzo się starasz, żeby wszystko było dobrze.
+            To wszystko sprawia, że jesteś wyjątkowa - kochana.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Mała muzyczka 🎶</h3>
+        <p>
+            "Różowe okulary"<br>
+            Wokal i tekst - Rafał Karwowski (to ja)<br>
+            Muzyka - Edith Piaf(chyba?)<br>
+            Realizacja - Krzysio
+        </p>
+
+        <audio controls>
+            <source src="osiołki.mp3" type="audio/mpeg">
+            Twoja przeglądarka nie obsługuje odtwarzacza audio.
+        </audio>
+    </div>
+
+    <div class="card">
+        <p>
+            Muszę Ci jeszcze raz powiedzieć, że bardzo Cię kocham <br>
+            i że jesteś dla mnie najważniejszą osobą na świecie. <br>
+            Dziękuję, że jesteś. 💖
+        </p>
+    </div>
+
+    <div class="footer">
+        Zrobione z myślą o Tobie 💖
+    </div>
+</div>
+
+<script>
+    
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 8000);
+    }, 600);
+
+     let heartClicks = 0;
+    const heartElement = document.querySelector(".heart");
+    
+    heartElement.style.cursor = "pointer";
+    heartElement.addEventListener("click", function() {
+        heartClicks++;
+        
+        if (heartClicks === 17) {
+            const message = document.createElement("div");
+            message.className = "easter-egg-message";
+            message.innerHTML = `
+                <p>Kosiam Cię💕</p>
+                <img src="KC.jfif" alt="KC" class="easter-egg-image">
+            `;
+            document.body.appendChild(message);
+            
+            setTimeout(() => {
+                message.remove();
+                heartClicks = 0; 
+            }, 6000);
+        }
+    })
+</script>
+
+<img src="null.png" alt="null" class="bottom-right-image">
+
+</body>
+</html>

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>For You ❤️</title>
+    <title>Pour toi ❤️</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-
 
     <link rel="stylesheet" href="css.css">
 </head>
@@ -16,55 +14,57 @@
 <div class="container">
     <div class="heart">❤️</div>
 
-    <h1>For You</h1>
-    <h2>A small place made just for you</h2>
+    <h1>Pour moi chére Ania</h1>
+    <h2>Un petit endroit créé avec amour</h2>
 
     <div class="card">
-        <h3>Hello, my love 🌸</h3>
+        <h3>Salut mon amour 🌸</h3>
         <p>
-            I wanted to create something special — something that would stay,
-            just like my feelings for you.
-            This page is a quiet reminder that you are deeply loved.
+            Voici le cadeau dont je t'ai tant parlé. 
+            Je tiens à te remercier pour tout ce que tu m'as apporté.
         </p>
     </div>
 
     <div class="card">
-        <h3>Why you mean so much to me 💕</h3>
+        <h3>Pourquoi je te suis reconnaissant?💕</h3>
         <ul class="reasons">
-            <li>Your smile makes everything feel lighter</li>
-            <li>You are beautiful in the most genuine way</li>
-            <li>Every conversation with you makes me smile and be thankful for you</li>
-            <li>I just love your <del>pimples</del> dimples</li>
-            <li>The moments we share — and the ones still waiting for us</li>
-            <li>Your piano skills are absolutely mesmerizing</li>
-            <li>You are my favorite person in this world 💖</li>
+            <li>Tous les moments où je me sentais proche de toi</li>
+            <li>Ton beau visage, tes yeux <del>et tes pieds</del></li>
+            <li>Pour être à mes côtés quand j'ai besoin de toi</li>
+            <li>Pour les souvenirs que j'ai avec toi.</li>
+            <li>Tu es ma personne préférée au monde 💖</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>A little promise 💌</h3>
+        <h3>Une petite promesse 💌</h3>
         <p>
-            I promise to be here — on easy days and difficult ones.
-            To support you, laugh with you,
-            and choose you every single day.
+           Je promets d'être à tes côtés dans 
+           les bons comme dans les mauvais moments.
+    Je serai là quand tu ne comprendras pas les maths 
+    ou quand tu n'auras pas la force de faire quoi que ce soit.
+     Même quand je serai de nouveau à Białystok et toi à Grajewo.
         </p>
     </div>
 
     <div class="card">
-        <h3>Play this 🎶</h3>
+        <h3>Écoute cette chanson 🎶</h3>
         <p>
-            This song is here to keep you company for a moment.
-            Close your eyes and feel how much you are loved.
+            Un peu de musique française,
+            pour accompagner ce moment rien qu’à toi. 
+            Ce n'est pas un travail de grande qualité,
+             mais je suis sûr que si tu m'aidais, 
+             le résultat serait formidable.
         </p>
 
-        <audio controls style="margin-top: 20px; width: 100%;">
-            <source src="Armstrong.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
+        <audio controls style="margin-top:20px; width:100%;">
+            <source src="Piaf.mp3" type="audio/mpeg">
+            Ton navigateur ne supporte pas la lecture audio.
         </audio>
     </div>
 
     <div class="footer">
-        Made with love by Rafał💕
+        Fait avec amour par Rafał💕
     </div>
 </div>
 
@@ -81,9 +81,8 @@
         document.body.appendChild(heart);
 
         setTimeout(() => heart.remove(), 7000);
-    }, 200);
+    }, 600);
 
-   
     let heartClicks = 0;
     const heartElement = document.querySelector(".heart");
     
@@ -95,8 +94,8 @@
             const message = document.createElement("div");
             message.className = "easter-egg-message";
             message.innerHTML = `
-                <p>I love you so much 💕</p>
-                <img src="ILY.png" alt="ILY" class="easter-egg-image">
+                <p>Je t'aime beaucoup 💕</p>
+                <img src="JTA.webp" alt="JTA" class="easter-egg-image">
             `;
             document.body.appendChild(message);
             
@@ -106,6 +105,7 @@
             }, 6000);
         }
     });
+
 </script>
 
 </body>
